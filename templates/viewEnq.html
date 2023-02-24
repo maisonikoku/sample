@@ -1,0 +1,25 @@
+{%extends 'base.html'%}
+
+{%block content%}
+  <h2>ENQUIRIES</h2>
+  <table border="" width="100%">
+    <tr>
+      <th>Name</th>
+      <th>Phone Number</th>
+      <th>Email</th>
+      <th>Course</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </tr>
+    {%for a in data%}
+    <tr>
+      <td>{{a.name}}</td>
+      <td>{{a.phone}}</td>
+      <td>{{a.email}}</td>
+      <td>{{a.course}}</td>
+      <td><a href="update/{{a.id}}">Edit</a></td>
+      <td><a href="delete/{{a.id}}">Delete</a></td>
+    </tr>
+    {%endfor%}
+  </table>
+{%endblock%}

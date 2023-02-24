@@ -1,0 +1,11 @@
+{%extends 'base.html'%}
+
+
+{%block content%}
+<h1>Welcome <a href="{%url 'logout'%}" class="pull-right btn btn-danger">logout</a></h1>
+<div class="links">
+
+  <a href="{%url 'addStu'%}">ADD STUDENT DATA</a>
+  <a href="{%url 'viewStu'%}">VIEW STUDENT DATA</a>
+  <a href="{%url 'viewEnq'%}">VIEW ENQUIRES</a></div>
+{%endblock%}

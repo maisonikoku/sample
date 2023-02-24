@@ -1,0 +1,31 @@
+{%extends 'base.html'%}
+
+{%block content%}
+  <h1>STUDENTS LIST</h1>
+  <table border="" width="100%">
+      <tr>
+        <th>Student Id</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email Id</th>
+        <th>Course Name</th>
+        <th>Fees</th>
+        <th>Address</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    {%for a in data%}
+    <tr>
+      <td>{{a.stdId}}</td>
+      <td>{{a.name}}</td>
+      <td>{{a.phone}}</td>
+      <td>{{a.mail}}</td>
+      <td>{{a.course}}</td>
+      <td>{{a.fees}}</td>
+      <td>{{a.address}}</td>
+      <td><a href="editStudent/{{a.id}}">Edit</a></td>
+      <td><a href="delStudent/{{a.id}}">Delete</a></td>
+    </tr>
+    {%endfor%}
+  </table>
+{%endblock%}
